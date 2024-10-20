@@ -1,1 +1,33 @@
+# Description of the project
+This project involves designing and implementing a library inventory management system using object-oriented programming (OOP) principles in Python. 
+The system manages the book collection and supports adding, deleting, updating, and viewing books. 
+It also includes functionality to generate reports based on the current inventory and multi-user support to handle different roles and permissions.
+
+# Structure of the Code
+The code is structured around four main classes: Book, LibraryInventory, Report, and User.
+Each class is responsible for specific components of the inventory management system.
+
+# Class: Book
+Represents individual books in the library.
+Attributes: book_id, title, author, genre, publication_year, isbn, quantity
+Methods: update_quantity(), get_details(), check_out(), return_book()
+# Class: LibraryInventory
+Manages a collection of Book objects.
+Attributes: books (list of Book objects)
+Methods: add_book(), remove_book(), get_book(), list_books(), update_inventory(), check_stock()
+# Class: Report
+Generates reports based on the current state of the library inventory.
+Attributes: inventory (reference to LibraryInventory instance)
+Methods: low_stock_report(), genre_report(), author_report()
+# Class: User
+Handles different types of users and their permissions.
+Attributes: username, role
+Methods: login(), get_permissions(), perform_inventory_actions()
+
+# Comments Regarding Structure
+The Book class encapsulates the properties and behavior of a book.
+The LibraryInventory class manages a collection of book objects and provides methods for adding, deleting, and updating books.
+The Report class generates various reports based on inventory, such as low inventory or specific type reports.
+The User class supports multiple roles with different permissions, allowing operations such as adding or deleting books based on the user's role.
+
 
