@@ -1,33 +1,71 @@
 # Description of the project
-This project involves designing and implementing a library inventory management system using object-oriented programming (OOP) principles in Python. 
-The system manages the book collection and supports adding, deleting, updating, and viewing books. 
-It also includes functionality to generate reports based on the current inventory and multi-user support to handle different roles and permissions.
+  This project involves designing and implementing a library inventory management system using object-oriented programming (OOP) principles in Python. 
+  The system manages the book collection and supports adding, deleting, updating, and viewing books. 
+  It also includes functionality to generate reports based on the current inventory and multi-user support to handle different roles and permissions.
 
 # Structure of the Code
-The code is structured around four main classes: Book, LibraryInventory, Report, and User.
-Each class is responsible for specific components of the inventory management system.
+  The code is structured around four main classes: Book, LibraryInventory, Report, and User.
+  Each class is responsible for specific components of the inventory management system.
 
-# Class: Book
-Represents individual books in the library.
-Attributes: book_id, title, author, genre, publication_year, isbn, quantity
-Methods: update_quantity(), get_details(), check_out(), return_book()
-# Class: LibraryInventory
-Manages a collection of Book objects.
-Attributes: books (list of Book objects)
-Methods: add_book(), remove_book(), get_book(), list_books(), update_inventory(), check_stock()
-# Class: Report
-Generates reports based on the current state of the library inventory.
-Attributes: inventory (reference to LibraryInventory instance)
-Methods: low_stock_report(), genre_report(), author_report()
-# Class: User
-Handles different types of users and their permissions.
-Attributes: username, role
-Methods: login(), get_permissions(), perform_inventory_actions()
+  # Class: Book
+    Represents individual books in the library.
+    Attributes: book_id, title, author, genre, publication_year, isbn, quantity
+    Methods: update_quantity(), get_details(), check_out(), return_book()
+
+  # Class: LibraryInventory
+    Manages a collection of Book objects.
+    Attributes: books (list of Book objects)
+    Methods: add_book(), remove_book(), get_book(), list_books(), update_inventory(), check_stock()
+
+  # Class: Report
+    Generates reports based on the current state of the library inventory.
+    Attributes: inventory (reference to LibraryInventory instance)
+    Methods: low_stock_report(), genre_report(), author_report()
+
+  # Class: User
+    Handles different types of users and their permissions.
+    Attributes: username, role
+    Methods: login(), get_permissions(), perform_inventory_actions()
 
 # Comments Regarding Structure
-The Book class encapsulates the properties and behavior of a book.
-The LibraryInventory class manages a collection of book objects and provides methods for adding, deleting, and updating books.
-The Report class generates various reports based on inventory, such as low inventory or specific type reports.
-The User class supports multiple roles with different permissions, allowing operations such as adding or deleting books based on the user's role.
+  The Book class encapsulates the properties and behavior of a book.
+  The LibraryInventory class manages a collection of book objects and provides methods for adding, deleting, and updating books.
+  The Report class generates various reports based on inventory, such as low inventory or specific type reports.
+  The User class supports multiple roles with different permissions, allowing operations such as adding or deleting books based on the user's role.
 
+# Instructions on How to Use the System
+  Setup and Initialization
+  Instantiate the LibraryInventory class to create an inventory.
+  Creates a Book object with the appropriate properties.
+
+      Adding Books
+      Use the add_book() method of LibraryInventory to add books to the inventory.
+
+      Removing a Book
+      Use the remove_book() method of LibraryInventory to remove a book from the inventory by book_id.
+
+      Update Inventory
+      Use the update_inventory() method of LibraryInventory to update the number of books by book_id.
+
+      Generating Reports
+      Instantiate the report class with a reference to a LibraryInventory instance.
+      Generate reports using the low_stock_report(), genre_report(), or author_report() methods.
+
+      User Operations
+      Instantiate the user class using a username and role.
+      Perform inventory actions using the perform_inventory_actions() method, depending on the user's role and desired action.
+
+# Verification of the Sanity of the Code
+  To verify the soundness of the code to check the validity of the implemented functionality you can enter the commands 
+  you want to execute in the main function of the code and run it to verify them, these commands include adding books, removing books, updating inventory, 
+  generating reports, and user actions.
+
+# Findings, Challenges, and Limitations
+  #Finding
+    In this project, I found that encapsulating different responsibilities (e.g., managing books, generating reports) into separate classes made errors easier
+    to find and make the code look cleaner.
+  #Challenge
+    I'm also experiencing some difficulties, such as colons (:) appearing twice in the output and accurately defining and managing user roles and permissions.
+  #Limitation
+    The restriction is also obvious, all operations here can only be based on the main function inside, if it is beyond the code will lead to errors.
 
